@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Peer Evaluation Form</title>
+<style>/* Mobile-first styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #333333;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h1 {
+        background-color: #4c4c4c;
+        padding: 10px;
+        text-align: center;
+        margin: 0;
+    }
+    
+    form {
+        padding: 20px;
+    }
+    
+    input[type="text"],
+    input[type="date"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 4px;
+        background-color: #4c4c4c;
+        color: #ffffff;
+    }
+    
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(1);
+    }
+    
+    .student-name {
+        display: flex;
+        gap: 10px;
+    }
+    
+    .student-name input[type="text"] {
+        flex: 1;
+    }
+    
+    button {
+        background-color: #4c4c4c;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+    }
+    
+    label {
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    input[type="date"] {
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        border: 1px solid #ccc;
+    }
+    
+    .peer-name {
+        display: flex;
+        gap: 0.5rem;
+    }
+    
+    .peer-name input[type="text"] {
+        flex: 1;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    th,
+    td {
+        padding: 0.5rem;
+        text-align: left;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    button {
+        padding: 0.5rem 1rem;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 0.25rem;
+        cursor: pointer;
+    }
+    
+    /* Mobile styles */
+    @media screen and (max-width: 480px) {
+        body {
+            font-size: 14px;
+        }
+    
+        h1 {
+            font-size: 1.2rem;
+            padding: 8px;
+        }
+    
+        form {
+            padding: 10px;
+        }
+    
+        input[type="text"],
+        input[type="date"] {
+            padding: 8px;
+            font-size: 14px;
+        }
+    
+        .student-name {
+            flex-direction: column;
+            gap: 5px;
+        }
+    
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+    
+        table th,
+        table td {
+            padding: 0.3rem;
+            font-size: 12px;
+        }
+    
+        .peer-name {
+            flex-direction: column;
+            gap: 5px;
+        }
+    
+        .peer-name input[type="text"] {
+            width: 100%;
+        }
+    }
+    
+    /* Tablet styles */
+    @media screen and (min-width: 768px) and (max-width: 1023px) {
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    
+        .student-name {
+            flex-direction: row;
+            gap: 10px;
+        }
+    
+        .peer-name {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+    
+        .peer-name input[type="text"] {
+            width: auto;
+        }
+    }
+    
+    /* Desktop styles */
+    @media screen and (min-width: 1024px) {
+        form {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    
+        .student-name {
+            flex-direction: row;
+            gap: 10px;
+        }
+    
+        .peer-name {
+            flex-direction: row;
+            gap: 0.5rem;
+        }
+    
+        .peer-name input[type="text"] {
+            width: auto;
+        }
+    }</style>
+</head>
+
+<body>
+    <h1>Student Peer Evaluation Form</h1>
+    <form>
+        <label>
+            First Name:
+            <input type="text" required>
+        </label>
+        <label>
+            Last Name:
+            <input type="text" required>
+        </label>
+        <label>
+            Class:
+            <input type="text" required>
+        </label>
+        <label>
+            Date:
+            <input type="date" placeholder="MM/DD/YYYY" required>
+            <button type="button">Calendar</button>
+        </label>
+
+        <h2>Self Evaluation</h2>
+        <table>
+            <tr>
+                <th></th>
+                <th>Not Satisfied</th>
+                <th>Somewhat Satisfied</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+            </tr>
+            <tr>
+                <td>Participation in team activities</td>
+                <td><input type="radio" name="participation-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="participation-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="participation-team" value="Satisfied"></td>
+                <td><input type="radio" name="participation-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Enthusiastic to generate new ideas</td>
+                <td><input type="radio" name="enthusiastic-ideas" value="Not Satisfied"></td>
+                <td><input type="radio" name="enthusiastic-ideas" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="enthusiastic-ideas" value="Satisfied"></td>
+                <td><input type="radio" name="enthusiastic-ideas" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Relationships with team members</td>
+                <td><input type="radio" name="relationships-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="relationships-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="relationships-team" value="Satisfied"></td>
+                <td><input type="radio" name="relationships-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Participation in discussions</td>
+                <td><input type="radio" name="participation-discussions" value="Not Satisfied"></td>
+                <td><input type="radio" name="participation-discussions" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="participation-discussions" value="Satisfied"></td>
+                <td><input type="radio" name="participation-discussions" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Taking responsibility</td>
+                <td><input type="radio" name="taking-responsibility" value="Not Satisfied"></td>
+                <td><input type="radio" name="taking-responsibility" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="taking-responsibility" value="Satisfied"></td>
+                <td><input type="radio" name="taking-responsibility" value="Very Satisfied"></td>
+            </tr>
+        </table>
+
+        <h2>Peer Evaluation</h2>
+
+        <!-- Peer 1 -->
+        <h3>Peer 1 Evaluation</h3>
+        <div class="peer-name">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <table>
+            <tr>
+                <th></th>
+                <th>Not Satisfied</th>
+                <th>Somewhat Satisfied</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+            </tr>
+            <tr>
+                <td>Participation in team activities</td>
+                <td><input type="radio" name="peer1-participation-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer1-participation-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer1-participation-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer1-participation-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Enthusiastic to generate new ideas</td>
+                <td><input type="radio" name="peer1-enthusiastic-ideas" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer1-enthusiastic-ideas" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer1-enthusiastic-ideas" value="Satisfied"></td>
+                <td><input type="radio" name="peer1-enthusiastic-ideas" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Relationships with team members</td>
+                <td><input type="radio" name="peer1-relationships-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer1-relationships-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer1-relationships-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer1-relationships-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Participation in discussions</td>
+                <td><input type="radio" name="peer1-participation-discussions" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer1-participation-discussions" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer1-participation-discussions" value="Satisfied"></td>
+                <td><input type="radio" name="peer1-participation-discussions" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Taking responsibility</td>
+                <td><input type="radio" name="peer1-taking-responsibility" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer1-taking-responsibility" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer1-taking-responsibility" value="Satisfied"></td>
+                <td><input type="radio" name="peer1-taking-responsibility" value="Very Satisfied"></td>
+            </tr>
+        </table>
+
+        <!-- Peer 2 -->
+        <h3>Peer 2 Evaluation</h3>
+        <div class="peer-name">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <table>
+            <tr>
+                <th></th>
+                <th>Not Satisfied</th>
+                <th>Somewhat Satisfied</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+            </tr>
+            <tr>
+                <td>Participation in team activities</td>
+                <td><input type="radio" name="peer2-participation-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer2-participation-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer2-participation-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer2-participation-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Enthusiastic to generate new ideas</td>
+                <td><input type="radio" name="peer2-enthusiastic-ideas" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer2-enthusiastic-ideas" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer2-enthusiastic-ideas" value="Satisfied"></td>
+                <td><input type="radio" name="peer2-enthusiastic-ideas" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Relationships with team members</td>
+                <td><input type="radio" name="peer2-relationships-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer2-relationships-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer2-relationships-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer2-relationships-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Participation in discussions</td>
+                <td><input type="radio" name="peer2-participation-discussions" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer2-participation-discussions" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer2-participation-discussions" value="Satisfied"></td>
+                <td><input type="radio" name="peer2-participation-discussions" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Taking responsibility</td>
+                <td><input type="radio" name="peer2-taking-responsibility" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer2-taking-responsibility" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer2-taking-responsibility" value="Satisfied"></td>
+                <td><input type="radio" name="peer2-taking-responsibility" value="Very Satisfied"></td>
+            </tr>
+        </table>
+
+        <!-- Peer 3 -->
+        <h3>Peer 3 Evaluation</h3>
+        <div class="peer-name">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <table>
+            <tr>
+                <th></th>
+                <th>Not Satisfied</th>
+                <th>Somewhat Satisfied</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+            </tr>
+            <tr>
+                <td>Participation in team activities</td>
+                <td><input type="radio" name="peer3-participation-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer3-participation-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer3-participation-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer3-participation-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Enthusiastic to generate new ideas</td>
+                <td><input type="radio" name="peer3-enthusiastic-ideas" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer3-enthusiastic-ideas" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer3-enthusiastic-ideas" value="Satisfied"></td>
+                <td><input type="radio" name="peer3-enthusiastic-ideas" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Relationships with team members</td>
+                <td><input type="radio" name="peer3-relationships-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer3-relationships-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer3-relationships-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer3-relationships-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Participation in discussions</td>
+                <td><input type="radio" name="peer3-participation-discussions" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer3-participation-discussions" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer3-participation-discussions" value="Satisfied"></td>
+                <td><input type="radio" name="peer3-participation-discussions" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Taking responsibility</td>
+                <td><input type="radio" name="peer3-taking-responsibility" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer3-taking-responsibility" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer3-taking-responsibility" value="Satisfied"></td>
+                <td><input type="radio" name="peer3-taking-responsibility" value="Very Satisfied"></td>
+            </tr>
+        </table>
+
+        <!-- Peer 4 -->
+        <h3>Peer 4 Evaluation</h3>
+        <div class="peer-name">
+            <input type="text" placeholder="First Name" required>
+            <input type="text" placeholder="Last Name" required>
+        </div>
+        <table>
+            <tr>
+                <th></th>
+                <th>Not Satisfied</th>
+                <th>Somewhat Satisfied</th>
+                <th>Satisfied</th>
+                <th>Very Satisfied</th>
+            </tr>
+            <tr>
+                <td>Participation in team activities</td>
+                <td><input type="radio" name="peer4-participation-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer4-participation-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer4-participation-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer4-participation-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Enthusiastic to generate new ideas</td>
+                <td><input type="radio" name="peer4-enthusiastic-ideas" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer4-enthusiastic-ideas" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer4-enthusiastic-ideas" value="Satisfied"></td>
+                <td><input type="radio" name="peer4-enthusiastic-ideas" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Relationships with team members</td>
+                <td><input type="radio" name="peer4-relationships-team" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer4-relationships-team" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer4-relationships-team" value="Satisfied"></td>
+                <td><input type="radio" name="peer4-relationships-team" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Participation in discussions</td>
+                <td><input type="radio" name="peer4-participation-discussions" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer4-participation-discussions" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer4-participation-discussions" value="Satisfied"></td>
+                <td><input type="radio" name="peer4-participation-discussions" value="Very Satisfied"></td>
+            </tr>
+            <tr>
+                <td>Taking responsibility</td>
+                <td><input type="radio" name="peer4-taking-responsibility" value="Not Satisfied"></td>
+                <td><input type="radio" name="peer4-taking-responsibility" value="Somewhat Satisfied"></td>
+                <td><input type="radio" name="peer4-taking-responsibility" value="Satisfied"></td>
+                <td><input type="radio" name="peer4-taking-responsibility" value="Very Satisfied"></td>
+            </tr>
+        </table>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>`````
